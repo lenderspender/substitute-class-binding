@@ -1,0 +1,33 @@
+{
+    "name": "lenderspender/substitute-class-binding",
+    "description": "Add substitute class bindings to Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bert van Hoekelen",
+            "email": "bert@magwel.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LenderSpender\\SubstituteClassBinding\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LenderSpender\\SubstituteClassBinding\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^7.4.0",
+        "illuminate/contracts": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "orchestra/testbench": "~3.8|^4.0",
+        "phpstan/phpstan": "^0.11.19",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "mheap/phpunit-github-actions-printer": "^1.2"
+    }
+}
