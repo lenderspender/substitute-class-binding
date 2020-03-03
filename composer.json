@@ -29,5 +29,10 @@
         "phpstan/phpstan": "^0.11.19",
         "friendsofphp/php-cs-fixer": "^2.16",
         "mheap/phpunit-github-actions-printer": "^1.2"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "analyse": "vendor/bin/phpstan analyse",
+        "fix": "vendor/bin/php-cs-fixer fix"
     }
 }

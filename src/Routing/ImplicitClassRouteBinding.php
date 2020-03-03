@@ -11,7 +11,7 @@ class ImplicitClassRouteBinding extends ImplicitRouteBinding
 {
     /**
      * @param \Illuminate\Contracts\Container\Container $container
-     * @param \Illuminate\Routing\Route       $route
+     * @param \Illuminate\Routing\Route                 $route
      */
     public static function resolveForRoute($container, $route)
     {
