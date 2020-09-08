@@ -21,9 +21,18 @@ class SubstituteClassBindings
         $this->container = $container;
     }
 
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
     public function handle($request, Closure $next)
     {
-        ImplicitClassRouteBinding::resolveForRoute($this->container, $request->route());
+        /** @var \Illuminate\Routing\Route $route */
+        $route = $request->route();
+        ImplicitClassRouteBinding::resolveForRoute($this->container, $route);
 
         return $next($request);
     }

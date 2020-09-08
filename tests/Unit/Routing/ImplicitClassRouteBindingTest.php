@@ -49,8 +49,11 @@ class ImplicitClassRouteBindingTest extends TestCase
 
 class FooBar implements UrlRoutable
 {
-    public $id;
+    public string $id;
 
+    /**
+     * @param array<string, string> $values
+     */
     public function __construct(array $values)
     {
         $this->id = $values['id'];
