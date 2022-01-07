@@ -6,19 +6,12 @@ namespace LenderSpender\SubstituteClassBinding\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Contracts\Routing\Registrar;
 use LenderSpender\SubstituteClassBinding\Routing\ImplicitClassRouteBinding;
 
 class SubstituteClassBindings
 {
-    private Registrar $router;
-
-    private Container $container;
-
-    public function __construct(Registrar $router, Container $container)
+    public function __construct(private Container $container)
     {
-        $this->router = $router;
-        $this->container = $container;
     }
 
     /**
