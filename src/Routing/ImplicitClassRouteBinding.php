@@ -17,7 +17,7 @@ class ImplicitClassRouteBinding extends ImplicitRouteBinding
     {
         $parameters = $route->parameters();
 
-        foreach ($route->signatureParameters(UrlRoutable::class) as $parameter) {
+        foreach ($route->signatureParameters([UrlRoutable::class]) as $parameter) {
             if (! $parameterName = static::getParameterName($parameter->name, $parameters)) {
                 continue;
             }
